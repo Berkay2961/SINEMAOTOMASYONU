@@ -1,0 +1,11 @@
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\bin\Debug\Sinema_Otamasyonu.exe.config
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\bin\Debug\Sinema_Otamasyonu.exe
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\bin\Debug\Sinema_Otamasyonu.pdb
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.Form1.resources
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.Properties.Resources.resources
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.exe
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.pdb
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.Anasayfa.resources

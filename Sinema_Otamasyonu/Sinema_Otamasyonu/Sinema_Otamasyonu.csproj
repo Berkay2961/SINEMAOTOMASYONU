@@ -84,6 +84,11 @@
     <Compile Include="seanslistele.Designer.cs">
       <DependentUpon>seanslistele.cs</DependentUpon>
     </Compile>
+    <Compile Include="sinema.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sinema.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +125,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sinema.xsc">
+      <DependentUpon>sinema.xsd</DependentUpon>
+    </None>
+    <None Include="sinema.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sinema.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="sinema.xss">
+      <DependentUpon>sinema.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

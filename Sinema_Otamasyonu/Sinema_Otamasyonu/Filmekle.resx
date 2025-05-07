@@ -3942,4 +3942,7 @@
         8UUU2GduHK7JpP4KoqgR8cq6Q4mhrbaJfIHslFFzTfoXZbw9lPF//9k=
 </value>
   </data>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

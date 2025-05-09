@@ -16,6 +16,12 @@ namespace Sinema_Otamasyonu
         {
             InitializeComponent();
         }
+        private void Filmekle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.ShowDialog();
+           
+        }
         sinemaTableAdapters.Film_BilgileriTableAdapter film=new sinemaTableAdapters.Film_BilgileriTableAdapter();
         private void btnFilmEkle_Click(object sender, EventArgs e)
         {
@@ -29,7 +35,7 @@ namespace Sinema_Otamasyonu
 
                 MessageBox.Show("Bu Film Daha Önce Eklendi!", "Uyarı");
             }
-            film.FilmEkleme(txtFilmAdi.Text,txtYonetmen.Text,comboFilmTuru.Text,txtSure.Text,dateTimePicker1.Text,txtYapimYili.Text,pictureBox1.ImageLocation);
+            //film.FilmEkleme(txtFilmAdi.Text,txtYonetmen.Text,comboFilmTuru.Text,txtSure.Text,dateTimePicker1.Text,txtYapimYili.Text,pictureBox1.ImageLocation);
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
             comboFilmTuru.Text = "";
 
@@ -40,5 +46,7 @@ namespace Sinema_Otamasyonu
             openFileDialog1.ShowDialog();
             pictureBox1.ImageLocation=openFileDialog1.FileName;
         }
+
+      
     }
 }

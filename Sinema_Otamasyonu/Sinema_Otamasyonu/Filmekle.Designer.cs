@@ -64,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(148, 108);
+            this.label1.Location = new System.Drawing.Point(142, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(148, 142);
+            this.label2.Location = new System.Drawing.Point(139, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(148, 176);
+            this.label3.Location = new System.Drawing.Point(141, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(147, 207);
+            this.label4.Location = new System.Drawing.Point(141, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(145, 245);
+            this.label5.Location = new System.Drawing.Point(141, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 20);
             this.label5.TabIndex = 5;
@@ -149,7 +149,7 @@
             // btnFilmEkle
             // 
             this.btnFilmEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnFilmEkle.Location = new System.Drawing.Point(253, 307);
+            this.btnFilmEkle.Location = new System.Drawing.Point(253, 321);
             this.btnFilmEkle.Name = "btnFilmEkle";
             this.btnFilmEkle.Size = new System.Drawing.Size(111, 45);
             this.btnFilmEkle.TabIndex = 11;
@@ -160,9 +160,9 @@
             // btnAfisSec
             // 
             this.btnAfisSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAfisSec.Location = new System.Drawing.Point(480, 307);
+            this.btnAfisSec.Location = new System.Drawing.Point(484, 321);
             this.btnAfisSec.Name = "btnAfisSec";
-            this.btnAfisSec.Size = new System.Drawing.Size(102, 45);
+            this.btnAfisSec.Size = new System.Drawing.Size(112, 45);
             this.btnAfisSec.TabIndex = 12;
             this.btnAfisSec.Text = "Afiş Seç";
             this.btnAfisSec.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(426, 108);
+            this.pictureBox2.Location = new System.Drawing.Point(415, 99);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 174);
+            this.pictureBox2.Size = new System.Drawing.Size(224, 202);
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
@@ -192,7 +192,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(145, 281);
+            this.label6.Location = new System.Drawing.Point(142, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 20);
             this.label6.TabIndex = 15;
@@ -221,6 +221,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Filmekle";
             this.Text = "BERKAY SİNEMA SALONLARI";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Filmekle_FormClosing);
+        
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

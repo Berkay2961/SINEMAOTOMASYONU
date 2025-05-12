@@ -64,6 +64,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSatislar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -137,7 +138,7 @@
             this.btnSeansListele.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSeansListele.ForeColor = System.Drawing.Color.Black;
             this.btnSeansListele.Image = ((System.Drawing.Image)(resources.GetObject("btnSeansListele.Image")));
-            this.btnSeansListele.Location = new System.Drawing.Point(496, 25);
+            this.btnSeansListele.Location = new System.Drawing.Point(509, 25);
             this.btnSeansListele.Name = "btnSeansListele";
             this.btnSeansListele.Size = new System.Drawing.Size(122, 116);
             this.btnSeansListele.TabIndex = 4;
@@ -446,17 +447,28 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(655, 151);
+            this.label3.Location = new System.Drawing.Point(656, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 32);
             this.label3.TabIndex = 11;
             this.label3.Text = "FİLM AFİŞİ";
+            // 
+            // btnSatislar
+            // 
+            this.btnSatislar.Location = new System.Drawing.Point(672, 25);
+            this.btnSatislar.Name = "btnSatislar";
+            this.btnSatislar.Size = new System.Drawing.Size(122, 116);
+            this.btnSatislar.TabIndex = 12;
+            this.btnSatislar.Text = "Satışlar";
+            this.btnSatislar.UseVisualStyleBackColor = true;
+            this.btnSatislar.Click += new System.EventHandler(this.btnSatislar_Click);
             // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 694);
+            this.Controls.Add(this.btnSatislar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -521,5 +533,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnSatislar;
     }
 }

@@ -52,6 +52,14 @@ namespace Sinema_Otamasyonu
             this.Hide();
         }
 
+        private void btnSatislar_Click(object sender, EventArgs e)
+        {
+            Satislar ekle = new Satislar();
+            ekle.Show();
+            this.Hide();
+        }
+
+
         int sayac = 0;
 
         private void Anasayfa_Load(object sender, EventArgs e)
@@ -78,7 +86,7 @@ namespace Sinema_Otamasyonu
             }
         }
 
-      
+    
     }
     }
 

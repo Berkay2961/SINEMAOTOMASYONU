@@ -13,3 +13,4 @@ C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\D
 C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.Salonekle.resources
 C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.seansekle.resources
 C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.seanslistele.resources
+C:\Users\Asus\Desktop\Sinema_Otomasyon\Sinema_Otamasyonu\Sinema_Otamasyonu\obj\Debug\Sinema_Otamasyonu.Satislar.resources

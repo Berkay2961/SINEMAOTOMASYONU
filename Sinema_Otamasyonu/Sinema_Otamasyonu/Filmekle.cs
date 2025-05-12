@@ -48,5 +48,5 @@ namespace Sinema_Otamasyonu
         }
 
       
-    }
+    }                                                               
 }

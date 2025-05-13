@@ -39,7 +39,6 @@ namespace Sinema_Otamasyonu
             txtSalonAdi.Text = "";
         }
 
-     
-
+    
     }
 }

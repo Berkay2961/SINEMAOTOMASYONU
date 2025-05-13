@@ -170,9 +170,10 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(415, 99);
+            this.pictureBox2.Location = new System.Drawing.Point(407, 106);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 202);
+            this.pictureBox2.Size = new System.Drawing.Size(236, 195);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
@@ -222,7 +223,6 @@
             this.Name = "Filmekle";
             this.Text = "BERKAY SİNEMA SALONLARI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Filmekle_FormClosing);
-        
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

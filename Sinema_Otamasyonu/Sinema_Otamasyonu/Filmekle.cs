@@ -22,12 +22,14 @@ namespace Sinema_Otamasyonu
             anasayfa.ShowDialog();
            
         }
-        sinemaTableAdapters.Film_BilgileriTableAdapter film=new sinemaTableAdapters.Film_BilgileriTableAdapter();
+        //  sinemaTableAdapters.Film_BilgileriTableAdapter film=new sinemaTableAdapters.Film_BilgileriTableAdapter();
+        sinemaTableAdapters.Film_BilgileriTableAdapter film = new  sinemaTableAdapters.Film_BilgileriTableAdapter();
         private void btnFilmEkle_Click(object sender, EventArgs e)
         {
             try
             {
-                film.FilmEkleme(txtFilmAdi.Text, txtYonetmen.Text, comboFilmTuru.Text, txtSure.Text, dateTimePicker1.Text, txtYapimYili.Text, pictureBox1.ImageLocation);
+                //    film.FilmEkleme(txtFilmAdi.Text, txtYonetmen.Text, comboFilmTuru.Text, txtSure.Text, dateTimePicker1.Text, txtYapimYili.Text, pictureBox1.ImageLocation);
+                film.FilmEkleme(txtFilmAdi.Text, txtYonetmen.Text, comboFilmTuru.Text, txtSure.Text, dateTimePicker1.Text, txtYapimYili.Text, pictureBox2.ImageLocation);
                 MessageBox.Show("Film Bilgileri Eklendi","Kayıt");
             }
             catch (Exception)
@@ -44,7 +46,7 @@ namespace Sinema_Otamasyonu
         private void btnAfisSec_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
-            pictureBox1.ImageLocation=openFileDialog1.FileName;
+            pictureBox2.ImageLocation=openFileDialog1.FileName;
         }
 
       

@@ -19,15 +19,41 @@ namespace Sinema_Otamasyonu
         sinemaTableAdapters.Satis_BilgileriTableAdapter SatisListesi=new sinemaTableAdapters.Satis_BilgileriTableAdapter();
         private void Satislar_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = SatisListesi.SatışListesi2();
+
+
+            dataGridView1.DataSource = SatisListesi.TariheGöreListele2(dateTimePicker1.Text);
+            ToplamUcretHesapla();
+
+        }
+
+        private void ToplamUcretHesapla()
+        {
             int ucrettoplami = 0;
-            for (int i=0; i<dataGridView1.Rows.Count; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 ucrettoplami += Convert.ToInt32(dataGridView1.Rows[i].Cells["ucret"].Value);
 
             }
             label1.Text = "Toplam Satış" + ucrettoplami + "TL";
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = SatisListesi.SatışListesi2();
+
+            ToplamUcretHesapla();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = SatisListesi.TariheGöreListele2(dateTimePicker1.Text);
+            ToplamUcretHesapla();
+        }
+
+        private void Satislar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.ShowDialog();
         }
     }
 }

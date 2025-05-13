@@ -45,8 +45,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-       
-
             // 
             // label1
             // 
@@ -88,6 +86,7 @@
             this.Name = "Salonekle";
             this.Text = "BERKAY SİNEMA SALONLARI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Salonekle_FormClosing);
+          
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

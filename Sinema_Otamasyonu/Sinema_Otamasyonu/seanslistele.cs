@@ -45,6 +45,14 @@ namespace Sinema_Otamasyonu
             tablo.Clear();
             seansListesi("select*from seans_bilgileri");
         }
-    
+
+        private void seanslistele_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.ShowDialog();
+       }
+
+     
     }
 }

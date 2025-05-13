@@ -62,7 +62,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(545, 47);
+            this.dateTimePicker1.Location = new System.Drawing.Point(557, 47);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(116, 22);
             this.dateTimePicker1.TabIndex = 2;
@@ -81,11 +81,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(136, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(98, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(525, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(575, 245);
             this.dataGridView1.TabIndex = 4;
             // 
             // seanslistele
@@ -100,6 +100,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "seanslistele";
             this.Text = "BERKAY SİNEMA SALONLARI";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.seanslistele_FormClosing);
             this.Load += new System.EventHandler(this.seanslistele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

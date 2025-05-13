@@ -61,8 +61,86 @@ namespace Sinema_Otamasyonu
 
 
         int sayac = 0;
+        private void FilmveSalonGetir(ComboBox combo,string sql1,string sql2)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand(sql1, baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                combo.Items.Add(read[sql2].ToString()); 
+            }
+            baglanti.Close();
+         }
+        private void FilmAfisiGoster()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select*from film_bilgileri where filmadi='"+comboFilmAdi.SelectedItem+"'", baglanti);
+            SqlDataReader reader = komut.ExecuteReader();
+            while (reader.Read())
+            {
+                pictureBox2.ImageLocation = reader["resim"].ToString();
+            }
+            baglanti.Close();
+        }
+        private void Combo_Dolu_Koltuklar()
+        {
+            comboKoltukİptal.Items.Clear();
+            comboKoltukİptal.Text = "";
+            foreach (Control item in panel1.Controls)
+            {
+                if (item is Button)
+                {
+                    if (item.BackColor==Color.Red)
+                    {
+                        comboKoltukİptal.Items.Add(item.Text);
+                    }
+                }
+            }
+        }
+        private void YenidenRenklendir()
+        {
+            foreach(Control item in panel1.Controls)
+            {
+                if(item is Button)
+                {
+                    item.BackColor=Color.White; 
+                }
+            }
+        }
+        private void Veritabani_Dolu_Koltuklar()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select*from satis_bilgileri where filmadi='"+comboFilmAdi.SelectedItem+"'and salonadi='"+comboSalonAdi.Text+"'and tarih='"+comboFilmTarihi.SelectedItem+"'and saat='"+comboFilmSeansi.SelectedItem+"' ",baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                foreach(Control item in panel1.Controls)
+                {
+                    if(item is Button)
+                    {
+                        if (read["koltukno"].ToString()==item.Text)
+                        {
+                            item.BackColor = Color.Red;
+                        }
+                        
+                    }
+                   
+                }
+            }
+            baglanti.Close() ;
+        }
 
         private void Anasayfa_Load(object sender, EventArgs e)
+        {
+            Boş_Koltuklar();
+            FilmveSalonGetir(comboFilmAdi,"select*from film_bilgileri", "filmadi");
+            FilmveSalonGetir(comboSalonAdi, "select*from salon_bilgileri", "salonadi");
+
+
+        }
+
+        private void Boş_Koltuklar()
         {
             sayac = 1;
             for (int i = 0; i < 8; i++)
@@ -71,7 +149,7 @@ namespace Sinema_Otamasyonu
                 {
                     Button btn = new Button();
                     btn.Size = new Size(30, 30);
-                    btn.BackColor= Color.White;
+                    btn.BackColor = Color.White;
                     btn.Location = new Point(j * 30 + 30, i * 30 + 30);
                     btn.Name = sayac.ToString();
                     btn.Text = sayac.ToString();
@@ -81,12 +159,60 @@ namespace Sinema_Otamasyonu
                     }
                     sayac++;
                     this.panel1.Controls.Add(btn);
+                    btn.Click += Btn_Click;
 
                 }
             }
         }
 
-    
+        private void Btn_Click(object sender, EventArgs e)
+        {
+        Button b=(Button)sender;
+         if(b.BackColor== Color.White)
+            {
+                txtKoltukNo.Text = b.Text;
+            }
+        }
+
+        private void comboFilmAdi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilmAfisiGoster();
+            YenidenRenklendir();
+            Combo_Dolu_Koltuklar();
+        }
+        sinemaTableAdapters.Satis_BilgileriTableAdapter satis= new sinemaTableAdapters.Satis_BilgileriTableAdapter();
+        private void btnBiletSat_Click(object sender, EventArgs e)
+        {
+            if (txtKoltukNo.Text!="")
+            {
+                try
+                {
+                    satis.Satış_Yap(txtKoltukNo.Text, comboSalonAdi.Text, comboFilmAdi.Text, comboFilmTarihi.Text, comboFilmSeansi.Text, txtAd.Text, txtSoyad.Text, comboUcret.Text, DateTime.Now.ToString());
+                }
+                catch (Exception hata)
+                {
+                    MessageBox.Show("Hata oluştu!"+hata.Message, "Uyarı");
+
+                } 
+            }
+            else
+            {
+                MessageBox.Show("Koltuk seçimi yapmadınız!", "Uyarı");
+            }
+        }
+        private void Film_Tarihi_Getir()
+        {
+            comboFilmTarihi.Text = "";
+            comboFilmSeansi.Text = "";
+            comboFilmTarihi.Items.Clear();
+            comboFilmSeansi.Items.Clear();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand();
+        }
+        private void comboSalonAdi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Film_Tarihi_Getir();
+        }
     }
     }
 

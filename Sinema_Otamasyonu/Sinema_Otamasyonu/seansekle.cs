@@ -124,5 +124,11 @@ namespace Sinema_Otamasyonu
         {
             dateTimePicker1.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void seansekle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.ShowDialog();
+        }
     }
 }

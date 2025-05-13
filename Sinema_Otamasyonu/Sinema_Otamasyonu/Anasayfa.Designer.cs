@@ -35,14 +35,14 @@
             this.btnSeansEkle = new System.Windows.Forms.Button();
             this.btnSeansListele = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtKoltukNo = new System.Windows.Forms.TextBox();
+            this.comboUcret = new System.Windows.Forms.ComboBox();
+            this.comboFilmSeansi = new System.Windows.Forms.ComboBox();
+            this.comboFilmTarihi = new System.Windows.Forms.ComboBox();
+            this.comboSalonAdi = new System.Windows.Forms.ComboBox();
+            this.comboFilmAdi = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,9 +51,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBiletSat = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboKoltukİptal = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -150,14 +150,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkRed;
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtSoyad);
+            this.groupBox1.Controls.Add(this.txtAd);
+            this.groupBox1.Controls.Add(this.txtKoltukNo);
+            this.groupBox1.Controls.Add(this.comboUcret);
+            this.groupBox1.Controls.Add(this.comboFilmSeansi);
+            this.groupBox1.Controls.Add(this.comboFilmTarihi);
+            this.groupBox1.Controls.Add(this.comboSalonAdi);
+            this.groupBox1.Controls.Add(this.comboFilmAdi);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
@@ -166,7 +166,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btnBiletSat);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(900, 25);
             this.groupBox1.Name = "groupBox1";
@@ -175,66 +175,69 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BİLET SATIŞ İŞLEMLERİ";
             // 
-            // textBox4
+            // txtSoyad
             // 
-            this.textBox4.Location = new System.Drawing.Point(129, 230);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(103, 22);
-            this.textBox4.TabIndex = 17;
+            this.txtSoyad.Location = new System.Drawing.Point(129, 230);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(103, 22);
+            this.txtSoyad.TabIndex = 17;
             // 
-            // textBox3
+            // txtAd
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 197);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(103, 22);
-            this.textBox3.TabIndex = 16;
+            this.txtAd.Location = new System.Drawing.Point(129, 197);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(103, 22);
+            this.txtAd.TabIndex = 16;
             // 
-            // textBox2
+            // txtKoltukNo
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 169);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(103, 22);
-            this.textBox2.TabIndex = 15;
+            this.txtKoltukNo.Enabled = false;
+            this.txtKoltukNo.Location = new System.Drawing.Point(129, 169);
+            this.txtKoltukNo.Name = "txtKoltukNo";
+            this.txtKoltukNo.Size = new System.Drawing.Size(103, 22);
+            this.txtKoltukNo.TabIndex = 15;
             // 
-            // comboBox6
+            // comboUcret
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(129, 258);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(103, 24);
-            this.comboBox6.TabIndex = 13;
+            this.comboUcret.FormattingEnabled = true;
+            this.comboUcret.Location = new System.Drawing.Point(129, 258);
+            this.comboUcret.Name = "comboUcret";
+            this.comboUcret.Size = new System.Drawing.Size(103, 24);
+            this.comboUcret.TabIndex = 13;
             // 
-            // comboBox4
+            // comboFilmSeansi
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(129, 138);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(103, 24);
-            this.comboBox4.TabIndex = 12;
+            this.comboFilmSeansi.FormattingEnabled = true;
+            this.comboFilmSeansi.Location = new System.Drawing.Point(129, 138);
+            this.comboFilmSeansi.Name = "comboFilmSeansi";
+            this.comboFilmSeansi.Size = new System.Drawing.Size(103, 24);
+            this.comboFilmSeansi.TabIndex = 12;
             // 
-            // comboBox3
+            // comboFilmTarihi
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(129, 100);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(103, 24);
-            this.comboBox3.TabIndex = 11;
+            this.comboFilmTarihi.FormattingEnabled = true;
+            this.comboFilmTarihi.Location = new System.Drawing.Point(129, 100);
+            this.comboFilmTarihi.Name = "comboFilmTarihi";
+            this.comboFilmTarihi.Size = new System.Drawing.Size(103, 24);
+            this.comboFilmTarihi.TabIndex = 11;
             // 
-            // comboBox2
+            // comboSalonAdi
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(129, 62);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(103, 24);
-            this.comboBox2.TabIndex = 10;
+            this.comboSalonAdi.FormattingEnabled = true;
+            this.comboSalonAdi.Location = new System.Drawing.Point(129, 62);
+            this.comboSalonAdi.Name = "comboSalonAdi";
+            this.comboSalonAdi.Size = new System.Drawing.Size(103, 24);
+            this.comboSalonAdi.TabIndex = 10;
+            this.comboSalonAdi.SelectedIndexChanged += new System.EventHandler(this.comboSalonAdi_SelectedIndexChanged);
             // 
-            // comboBox1
+            // comboFilmAdi
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(129, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 24);
-            this.comboBox1.TabIndex = 9;
+            this.comboFilmAdi.FormattingEnabled = true;
+            this.comboFilmAdi.Location = new System.Drawing.Point(129, 25);
+            this.comboFilmAdi.Name = "comboFilmAdi";
+            this.comboFilmAdi.Size = new System.Drawing.Size(103, 24);
+            this.comboFilmAdi.TabIndex = 9;
+            this.comboFilmAdi.SelectedIndexChanged += new System.EventHandler(this.comboFilmAdi_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -316,21 +319,22 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "FİLM ADI:";
             // 
-            // button4
+            // btnBiletSat
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(108, 298);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 29);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Bilet Sat";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnBiletSat.BackColor = System.Drawing.Color.Transparent;
+            this.btnBiletSat.ForeColor = System.Drawing.Color.Black;
+            this.btnBiletSat.Location = new System.Drawing.Point(108, 298);
+            this.btnBiletSat.Name = "btnBiletSat";
+            this.btnBiletSat.Size = new System.Drawing.Size(97, 29);
+            this.btnBiletSat.TabIndex = 0;
+            this.btnBiletSat.Text = "Bilet Sat";
+            this.btnBiletSat.UseVisualStyleBackColor = false;
+            this.btnBiletSat.Click += new System.EventHandler(this.btnBiletSat_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DarkRed;
-            this.groupBox2.Controls.Add(this.comboBox5);
+            this.groupBox2.Controls.Add(this.comboKoltukİptal);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -342,13 +346,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "BİLET İPTAL";
             // 
-            // comboBox5
+            // comboKoltukİptal
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(129, 70);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(103, 24);
-            this.comboBox5.TabIndex = 13;
+            this.comboKoltukİptal.FormattingEnabled = true;
+            this.comboKoltukİptal.Location = new System.Drawing.Point(129, 70);
+            this.comboKoltukİptal.Name = "comboKoltukİptal";
+            this.comboKoltukİptal.Size = new System.Drawing.Size(103, 24);
+            this.comboKoltukİptal.TabIndex = 13;
             // 
             // label12
             // 
@@ -440,6 +444,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(534, 195);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(360, 335);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
@@ -505,7 +510,7 @@
         private System.Windows.Forms.Button btnSeansListele;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBiletSat;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
@@ -523,15 +528,15 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtKoltukNo;
+        private System.Windows.Forms.ComboBox comboUcret;
+        private System.Windows.Forms.ComboBox comboFilmSeansi;
+        private System.Windows.Forms.ComboBox comboFilmTarihi;
+        private System.Windows.Forms.ComboBox comboSalonAdi;
+        private System.Windows.Forms.ComboBox comboFilmAdi;
+        private System.Windows.Forms.ComboBox comboKoltukİptal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnSatislar;
     }

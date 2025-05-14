@@ -36,7 +36,7 @@ namespace Sinema_Otamasyonu
             }
             label1.Text = "Toplam Satış" + ucrettoplami + "TL";
         }
-
+        //Toplam satışları gösteren kısım.
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = SatisListesi.SatışListesi2();
@@ -48,6 +48,7 @@ namespace Sinema_Otamasyonu
         {
             dataGridView1.DataSource = SatisListesi.TariheGöreListele2(dateTimePicker1.Text);
             ToplamUcretHesapla();
+
         }
 
         private void Satislar_FormClosing(object sender, FormClosingEventArgs e)

@@ -141,6 +141,11 @@
             // comboFilmTuru
             // 
             this.comboFilmTuru.FormattingEnabled = true;
+            this.comboFilmTuru.Items.AddRange(new object[] {
+            "Dram",
+            "Komedi",
+            "Aksiyon",
+            "Bilim Kurgu"});
             this.comboFilmTuru.Location = new System.Drawing.Point(243, 172);
             this.comboFilmTuru.Name = "comboFilmTuru";
             this.comboFilmTuru.Size = new System.Drawing.Size(121, 24);

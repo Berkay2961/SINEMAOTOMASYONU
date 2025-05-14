@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:Salon_Bilgileri" ZOrder="4" X="76" Y="64" Height="158" Width="267" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="28" OldDataTableHeight="0" SplitterPosition="76" />
     <Shape ID="DesignTable:Seans_Bilgileri" ZOrder="3" X="896" Y="171" Height="227" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:Satis_Bilgileri" ZOrder="2" X="832" Y="484" Height="365" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
+    <Shape ID="DesignTable:Satis_Bilgileri" ZOrder="2" X="832" Y="484" Height="388" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
     <Shape ID="DesignTable:Film_Bilgileri" ZOrder="1" X="517" Y="219" Height="296" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="28" OldDataTableHeight="0" SplitterPosition="214" />
   </Shapes>
   <Connectors />

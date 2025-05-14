@@ -176,6 +176,12 @@ namespace Sinema_Otamasyonu
 
         private void comboFilmAdi_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboFilmSeansi.Items.Clear();  
+            comboFilmTarihi.Items.Clear();
+            comboSalonAdi.Text = "";
+            comboFilmSeansi.Text = "";
+            comboFilmTarihi.Text = "";
+            foreach (Control item in groupBox1.Controls) if (item is TextBox) item.Text = "";
             FilmAfisiGoster();
             YenidenRenklendir();
             Combo_Dolu_Koltuklar();
@@ -188,6 +194,12 @@ namespace Sinema_Otamasyonu
                 try
                 {
                     satis.Satış_Yap(txtKoltukNo.Text, comboSalonAdi.Text, comboFilmAdi.Text, comboFilmTarihi.Text, comboFilmSeansi.Text, txtAd.Text, txtSoyad.Text, comboUcret.Text, DateTime.Now.ToString());
+                    foreach (Control item in groupBox1.Controls) if (item is TextBox) item.Text = "";
+                    YenidenRenklendir();
+                    Veritabani_Dolu_Koltuklar();
+                    Combo_Dolu_Koltuklar();
+                        
+
                 }
                 catch (Exception hata)
                 {
@@ -269,6 +281,35 @@ namespace Sinema_Otamasyonu
             YenidenRenklendir();
             Veritabani_Dolu_Koltuklar();
             Combo_Dolu_Koltuklar();
+        }
+
+        private void btnİptal_Click(object sender, EventArgs e)
+        {
+            if(comboKoltukİptal.Text!="")
+            {
+                try
+                {
+                    satis.Satış_İptal(comboFilmAdi.Text, comboSalonAdi.Text, comboFilmTarihi.Text, comboFilmSeansi.Text, comboKoltukİptal.Text);
+                    YenidenRenklendir();
+                    Veritabani_Dolu_Koltuklar();
+                    Combo_Dolu_Koltuklar();
+                }
+                catch (Exception hata)
+                {
+
+                    MessageBox.Show("Hata oluştu!"+hata.Message, "Uyarı");
+                }
+                
+            }
+           else
+            {
+                MessageBox.Show("Koltuk seçimi yapmadınız!", "Uyarı");
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     }

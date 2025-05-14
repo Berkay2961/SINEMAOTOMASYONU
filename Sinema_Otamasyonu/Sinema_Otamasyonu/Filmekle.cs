@@ -22,13 +22,13 @@ namespace Sinema_Otamasyonu
             anasayfa.ShowDialog();
            
         }
-        //  sinemaTableAdapters.Film_BilgileriTableAdapter film=new sinemaTableAdapters.Film_BilgileriTableAdapter();
+       
         sinemaTableAdapters.Film_BilgileriTableAdapter film = new  sinemaTableAdapters.Film_BilgileriTableAdapter();
         private void btnFilmEkle_Click(object sender, EventArgs e)
         {
             try
             {
-                //    film.FilmEkleme(txtFilmAdi.Text, txtYonetmen.Text, comboFilmTuru.Text, txtSure.Text, dateTimePicker1.Text, txtYapimYili.Text, pictureBox1.ImageLocation);
+               
                 film.FilmEkleme(txtFilmAdi.Text, txtYonetmen.Text, comboFilmTuru.Text, txtSure.Text, dateTimePicker1.Text, txtYapimYili.Text, pictureBox2.ImageLocation);
                 MessageBox.Show("Film Bilgileri Eklendi","Kayıt");
             }
@@ -37,7 +37,7 @@ namespace Sinema_Otamasyonu
 
                 MessageBox.Show("Bu Film Daha Önce Eklendi!", "Uyarı");
             }
-            //film.FilmEkleme(txtFilmAdi.Text,txtYonetmen.Text,comboFilmTuru.Text,txtSure.Text,dateTimePicker1.Text,txtYapimYili.Text,pictureBox1.ImageLocation);
+         
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
             comboFilmTuru.Text = "";
 

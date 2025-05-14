@@ -51,11 +51,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(349, 49);
+            this.label1.BackColor = System.Drawing.Color.DarkRed;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(294, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 20);
+            this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tarihe Göre Listele";
             // 
@@ -70,12 +71,15 @@
             // 
             // TumSeanslar
             // 
-            this.TumSeanslar.Location = new System.Drawing.Point(545, 353);
+            this.TumSeanslar.BackColor = System.Drawing.SystemColors.Control;
+            this.TumSeanslar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TumSeanslar.ForeColor = System.Drawing.Color.Black;
+            this.TumSeanslar.Location = new System.Drawing.Point(524, 339);
             this.TumSeanslar.Name = "TumSeanslar";
-            this.TumSeanslar.Size = new System.Drawing.Size(112, 36);
+            this.TumSeanslar.Size = new System.Drawing.Size(135, 44);
             this.TumSeanslar.TabIndex = 3;
             this.TumSeanslar.Text = "Tüm Seanslar";
-            this.TumSeanslar.UseVisualStyleBackColor = true;
+            this.TumSeanslar.UseVisualStyleBackColor = false;
             this.TumSeanslar.Click += new System.EventHandler(this.TumSeanslar_Click);
             // 
             // dataGridView1

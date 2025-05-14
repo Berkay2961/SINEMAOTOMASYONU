@@ -55,7 +55,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboKoltukİptal = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnİptal = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,6 +65,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSatislar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,7 +87,7 @@
             // 
             this.btnSalonEkle.BackColor = System.Drawing.Color.Transparent;
             this.btnSalonEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalonEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSalonEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSalonEkle.ForeColor = System.Drawing.Color.Black;
             this.btnSalonEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnSalonEkle.Image")));
             this.btnSalonEkle.Location = new System.Drawing.Point(28, 25);
@@ -102,7 +103,7 @@
             // 
             this.btnFilmEkle.BackColor = System.Drawing.Color.Transparent;
             this.btnFilmEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilmEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFilmEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFilmEkle.ForeColor = System.Drawing.Color.Black;
             this.btnFilmEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnFilmEkle.Image")));
             this.btnFilmEkle.Location = new System.Drawing.Point(175, 25);
@@ -118,7 +119,7 @@
             // 
             this.btnSeansEkle.BackColor = System.Drawing.Color.Transparent;
             this.btnSeansEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeansEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSeansEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSeansEkle.ForeColor = System.Drawing.Color.Black;
             this.btnSeansEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnSeansEkle.Image")));
             this.btnSeansEkle.Location = new System.Drawing.Point(333, 25);
@@ -138,7 +139,7 @@
             this.btnSeansListele.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSeansListele.ForeColor = System.Drawing.Color.Black;
             this.btnSeansListele.Image = ((System.Drawing.Image)(resources.GetObject("btnSeansListele.Image")));
-            this.btnSeansListele.Location = new System.Drawing.Point(509, 25);
+            this.btnSeansListele.Location = new System.Drawing.Point(504, 26);
             this.btnSeansListele.Name = "btnSeansListele";
             this.btnSeansListele.Size = new System.Drawing.Size(122, 116);
             this.btnSeansListele.TabIndex = 4;
@@ -200,9 +201,14 @@
             // comboUcret
             // 
             this.comboUcret.FormattingEnabled = true;
+            this.comboUcret.Items.AddRange(new object[] {
+            "100",
+            "150",
+            "50"});
             this.comboUcret.Location = new System.Drawing.Point(129, 258);
             this.comboUcret.Name = "comboUcret";
             this.comboUcret.Size = new System.Drawing.Size(103, 24);
+            this.comboUcret.Sorted = true;
             this.comboUcret.TabIndex = 13;
             // 
             // comboFilmSeansi
@@ -211,6 +217,7 @@
             this.comboFilmSeansi.Location = new System.Drawing.Point(129, 138);
             this.comboFilmSeansi.Name = "comboFilmSeansi";
             this.comboFilmSeansi.Size = new System.Drawing.Size(103, 24);
+            this.comboFilmSeansi.Sorted = true;
             this.comboFilmSeansi.TabIndex = 12;
             this.comboFilmSeansi.SelectedIndexChanged += new System.EventHandler(this.comboFilmSeansi_SelectedIndexChanged);
             // 
@@ -220,6 +227,7 @@
             this.comboFilmTarihi.Location = new System.Drawing.Point(129, 100);
             this.comboFilmTarihi.Name = "comboFilmTarihi";
             this.comboFilmTarihi.Size = new System.Drawing.Size(103, 24);
+            this.comboFilmTarihi.Sorted = true;
             this.comboFilmTarihi.TabIndex = 11;
             this.comboFilmTarihi.SelectedIndexChanged += new System.EventHandler(this.comboFilmTarihi_SelectedIndexChanged);
             // 
@@ -229,6 +237,7 @@
             this.comboSalonAdi.Location = new System.Drawing.Point(129, 62);
             this.comboSalonAdi.Name = "comboSalonAdi";
             this.comboSalonAdi.Size = new System.Drawing.Size(103, 24);
+            this.comboSalonAdi.Sorted = true;
             this.comboSalonAdi.TabIndex = 10;
             this.comboSalonAdi.SelectedIndexChanged += new System.EventHandler(this.comboSalonAdi_SelectedIndexChanged);
             // 
@@ -238,6 +247,7 @@
             this.comboFilmAdi.Location = new System.Drawing.Point(129, 25);
             this.comboFilmAdi.Name = "comboFilmAdi";
             this.comboFilmAdi.Size = new System.Drawing.Size(103, 24);
+            this.comboFilmAdi.Sorted = true;
             this.comboFilmAdi.TabIndex = 9;
             this.comboFilmAdi.SelectedIndexChanged += new System.EventHandler(this.comboFilmAdi_SelectedIndexChanged);
             // 
@@ -338,7 +348,7 @@
             this.groupBox2.BackColor = System.Drawing.Color.DarkRed;
             this.groupBox2.Controls.Add(this.comboKoltukİptal);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.btnİptal);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(900, 382);
@@ -354,6 +364,7 @@
             this.comboKoltukİptal.Location = new System.Drawing.Point(129, 70);
             this.comboKoltukİptal.Name = "comboKoltukİptal";
             this.comboKoltukİptal.Size = new System.Drawing.Size(103, 24);
+            this.comboKoltukİptal.Sorted = true;
             this.comboKoltukİptal.TabIndex = 13;
             // 
             // label12
@@ -366,16 +377,17 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "KOLTUK NO:";
             // 
-            // button5
+            // btnİptal
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(105, 137);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(97, 29);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Bilet İptal";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnİptal.BackColor = System.Drawing.Color.Transparent;
+            this.btnİptal.ForeColor = System.Drawing.Color.Black;
+            this.btnİptal.Location = new System.Drawing.Point(105, 137);
+            this.btnİptal.Name = "btnİptal";
+            this.btnİptal.Size = new System.Drawing.Size(97, 29);
+            this.btnİptal.TabIndex = 1;
+            this.btnİptal.Text = "Bilet İptal";
+            this.btnİptal.UseVisualStyleBackColor = false;
+            this.btnİptal.Click += new System.EventHandler(this.btnİptal_Click);
             // 
             // groupBox3
             // 
@@ -424,7 +436,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.BackColor = System.Drawing.Color.Red;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(31, 21);
@@ -439,6 +451,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(516, 335);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
@@ -453,7 +466,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.DarkRed;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(656, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 32);
@@ -462,19 +477,35 @@
             // 
             // btnSatislar
             // 
+            this.btnSatislar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSatislar.Image = ((System.Drawing.Image)(resources.GetObject("btnSatislar.Image")));
             this.btnSatislar.Location = new System.Drawing.Point(672, 25);
             this.btnSatislar.Name = "btnSatislar";
             this.btnSatislar.Size = new System.Drawing.Size(122, 116);
             this.btnSatislar.TabIndex = 12;
-            this.btnSatislar.Text = "Satışlar";
+            this.btnSatislar.Text = "SATIŞLAR";
+            this.btnSatislar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSatislar.UseVisualStyleBackColor = true;
             this.btnSatislar.Click += new System.EventHandler(this.btnSatislar_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.DarkRed;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(151, 155);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(182, 32);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "KOLTUKLAR";
             // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 694);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btnSatislar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
@@ -514,7 +545,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnBiletSat;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnİptal;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -542,5 +573,6 @@
         private System.Windows.Forms.ComboBox comboKoltukİptal;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnSatislar;
+        private System.Windows.Forms.Label label13;
     }
 }

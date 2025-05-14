@@ -207,11 +207,68 @@ namespace Sinema_Otamasyonu
             comboFilmTarihi.Items.Clear();
             comboFilmSeansi.Items.Clear();
             baglanti.Open();
-            SqlCommand komut = new SqlCommand();
+            SqlCommand komut = new SqlCommand("select*from seans_bilgileri where filmadi='"+comboFilmAdi.SelectedItem+"'and salonadi='"+comboSalonAdi.SelectedItem+"'",baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                if (DateTime.Parse(read["tarih"].ToString()) >= DateTime.Parse(DateTime.Now.ToShortDateString()))
+                    {
+                    if (!comboFilmTarihi.Items.Contains(read["tarih"].ToString()))
+                    {
+                        comboFilmTarihi.Items.Add(read["tarih"].ToString());
+                    }
+                   
+                }
+               
+            }
+            baglanti.Close();
         }
         private void comboSalonAdi_SelectedIndexChanged(object sender, EventArgs e)
         {
             Film_Tarihi_Getir();
+        }
+        private void Film_Seansi_Getir()
+        {
+            comboFilmSeansi.Text = "";
+            comboFilmSeansi.Items.Clear();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select*from seans_bilgileri where filmadi='" + comboFilmAdi.SelectedItem + "'and salonadi='" + comboSalonAdi.SelectedItem + "'and tarih='"+comboFilmTarihi.SelectedItem+"'", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                if (DateTime.Parse(read["tarih"].ToString()) == DateTime.Parse(DateTime.Now.ToShortDateString()))
+                {
+                    if (DateTime.Parse (read["seans"].ToString())>DateTime.Parse(DateTime.Now.ToShortTimeString()))
+                        {
+                        comboFilmSeansi.Items.Add(read["seans"].ToString());
+                    }
+                    
+                       
+                    
+
+                }
+              else  if (DateTime.Parse(read["tarih"].ToString()) > DateTime.Parse(DateTime.Now.ToShortDateString()))
+                {
+                    
+                    
+                        comboFilmSeansi.Items.Add(read["seans"].ToString());
+                    
+
+                }
+
+            }
+            baglanti.Close();
+        }
+        private void comboFilmTarihi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Film_Seansi_Getir();    
+        }
+
+        private void comboFilmSeansi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            YenidenRenklendir();
+            Veritabani_Dolu_Koltuklar();
+            Combo_Dolu_Koltuklar();
         }
     }
     }

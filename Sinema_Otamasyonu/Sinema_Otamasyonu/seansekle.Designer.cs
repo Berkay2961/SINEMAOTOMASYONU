@@ -311,6 +311,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "seansekle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BERKAY SİNEMA SALONLARI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.seansekle_FormClosing);
             this.Load += new System.EventHandler(this.seansekle_Load);

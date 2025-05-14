@@ -221,6 +221,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Filmekle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BERKAY SİNEMA SALONLARI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Filmekle_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

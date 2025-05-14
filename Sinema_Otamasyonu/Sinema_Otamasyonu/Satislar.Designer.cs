@@ -87,6 +87,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Satislar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Satislar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Satislar_FormClosing);
             this.Load += new System.EventHandler(this.Satislar_Load);

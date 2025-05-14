@@ -84,9 +84,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Salonekle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BERKAY SİNEMA SALONLARI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Salonekle_FormClosing);
-          
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

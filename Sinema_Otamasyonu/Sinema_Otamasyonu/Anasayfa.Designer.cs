@@ -212,6 +212,7 @@
             this.comboFilmSeansi.Name = "comboFilmSeansi";
             this.comboFilmSeansi.Size = new System.Drawing.Size(103, 24);
             this.comboFilmSeansi.TabIndex = 12;
+            this.comboFilmSeansi.SelectedIndexChanged += new System.EventHandler(this.comboFilmSeansi_SelectedIndexChanged);
             // 
             // comboFilmTarihi
             // 
@@ -220,6 +221,7 @@
             this.comboFilmTarihi.Name = "comboFilmTarihi";
             this.comboFilmTarihi.Size = new System.Drawing.Size(103, 24);
             this.comboFilmTarihi.TabIndex = 11;
+            this.comboFilmTarihi.SelectedIndexChanged += new System.EventHandler(this.comboFilmTarihi_SelectedIndexChanged);
             // 
             // comboSalonAdi
             // 
@@ -486,6 +488,7 @@
             this.Controls.Add(this.btnSalonEkle);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Anasayfa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BERKAY SİNEMA SALONLARI";
             this.Load += new System.EventHandler(this.Anasayfa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
